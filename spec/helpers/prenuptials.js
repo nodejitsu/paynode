@@ -1,9 +1,9 @@
-var sys = require('sys')
+var util = require('util')
 
 exports.one = function(fn){
   return function(err, result) { fn(err) }
 }
 
 exports.failWithDump = function(){
-  sys.puts(sys.inspect(arguments))
+  util.puts(util.inspect(arguments))
 }
